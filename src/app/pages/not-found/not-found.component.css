@@ -1,0 +1,11 @@
+.not-found-container {
+  height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.not-found-title {
+  color: white;
+}

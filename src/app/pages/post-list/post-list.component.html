@@ -1,0 +1,10 @@
+<div class="posts" *ngIf="(posts$ | async) as posts; else emptyList">
+    <div *ngFor="let post of posts">
+        <posts [title]="post.title" [text]="post.body" [id]="post.id"></posts>
+    </div>
+</div>
+<ng-template #emptyList>
+    <div class="empty">
+        <p>There is no posts today // Vise srece drugi put</p>
+    </div>
+</ng-template>

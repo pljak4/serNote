@@ -1,0 +1,24 @@
+<div class="big-container">
+    <div class="small-container">
+        <!-- mogao sam sve izbaciti u novu komponentu ili napraviti dynamicku komponentu "posts" -->
+        <mat-card class="card" *ngIf="details$ | async as postDetails; else noPostFound">
+            <mat-card-header>
+                <mat-card-title class="title">{{ postDetails.title | uppercase }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="text">
+                <p>
+                    {{postDetails.body}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+
+        <ng-template #noPostFound>
+            <mat-card>
+                <mat-card-title>No Post Found</mat-card-title>
+                <mat-card-content>
+                    <p>No post found for the provided ID.</p>
+                </mat-card-content>
+            </mat-card>
+        </ng-template>
+    </div>
+</div>

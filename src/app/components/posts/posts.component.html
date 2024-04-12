@@ -1,0 +1,20 @@
+<mat-card class="example-card" [ngClass]="{'expanded': isExpanded}">
+    <mat-card-header>
+        <mat-card-title class="title" [matTooltip]="title | uppercase">{{ title | uppercase }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="text" [ngClass]="{'expanded': isExpanded}">
+        <p>
+            {{text}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="toggleExpand()">
+            <mat-icon>{{ isExpanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+            {{ isExpanded ? 'Show less' : 'Find out more' }}
+        </button>
+        <button mat-button [routerLink]="'/info/' + id">
+            <mat-icon>input</mat-icon>
+            Details
+        </button>
+    </mat-card-actions>
+</mat-card>
