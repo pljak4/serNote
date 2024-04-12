@@ -14,5 +14,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 #### NOTE
 ***It's important to note that this project, due to its size and scope, was developed with the use of RxJS. 
 Not much emphasis was placed on the design of the application itself. (Material UI)
-This web application was created specifically to meet the criteria of the task within a very short period of time (2h). 
+This web application was created specifically to meet the criteria of the task within a very short period. 
 Angular 17, Node.js v21 were used in the development process.***
